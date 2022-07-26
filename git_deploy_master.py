@@ -3,16 +3,14 @@ import os
 import subprocess
 
 retorno = subprocess.run([
-        "git"
-        ,"branch"
+        "git", "branch"
         ]
         #, stderr = subprocess.PIPE
         , capture_output=True
         , text=True
         , shell=True)
 retorno = subprocess.run([
-        "git"
-        ,"branch"
+        "git", "pull", "origin", "master"
         ]
         #, stderr = subprocess.PIPE
         , capture_output=True
