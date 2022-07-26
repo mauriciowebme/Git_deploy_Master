@@ -2,7 +2,7 @@
 import os
 import subprocess
 
-teste = subprocess.run([
+retorno = subprocess.run([
         "git"
         ,"branch"
         ]
@@ -10,5 +10,13 @@ teste = subprocess.run([
         , capture_output=True
         , text=True
         , shell=True)
-print(teste.stdout)
+retorno = subprocess.run([
+        "git"
+        ,"branch"
+        ]
+        #, stderr = subprocess.PIPE
+        , capture_output=True
+        , text=True
+        , shell=True)
+print(retorno.stdout)
 base_dir = os.path.dirname(__file__)+'\\.git'
