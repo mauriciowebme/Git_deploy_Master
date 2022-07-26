@@ -17,4 +17,5 @@ retorno = subprocess.run([
         , text=True
         , shell=True)
 print(retorno.stdout)
+
 base_dir = os.path.dirname(__file__)+'\\.git'
