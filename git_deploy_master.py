@@ -28,9 +28,9 @@ if __name__ == '__main__':
         cmd_list = [
                 #"dir",
                 #"git status",
-                "git remote show origin",
-                "git checkout master",
-                "git pull master",
+                #"git remote show origin",
+                "git checkout teste2",
+                "git pull origin teste2",
                 #"git config --list",
                 
                 
