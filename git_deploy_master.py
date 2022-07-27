@@ -23,11 +23,11 @@ def Comandos(cmd_ajustado = []):
                 print(retorno.stderr)
         return retorno.stdout
 
-cmd_list = [
-        #"dir",
-        #"git status",
-        "git pull origin master"
-]
-retorno = Comandos(cmd_list)
-o=0
-input()
+if __name__ == '__main__':
+        cmd_list = [
+                #"dir",
+                #"git status",
+                "git pull origin master"
+        ]
+        retorno = Comandos(cmd_list)
+        input()
