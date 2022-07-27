@@ -2,17 +2,25 @@
 import os
 import subprocess
 
-def Comandos(cmd_ajustado = []):
-        cmd_ajustado = F"cd {os.path.dirname(__file__)} && "
+def Comandos(comandos_cmd = []):
+        """
+        Exemplos:
+        comandos_cmd = [
+                "dir",
+                "cd..",
+                "dir",
+        ]
+        """
+        comandos_cmd = F"cd {os.path.dirname(__file__)} && "
         cont_cm = 0
         for cm in cmd_list:
                 cont_cm += 1
                 if cont_cm < len(cmd_list):
-                        cmd_ajustado += cm+" && echo ------------------------------------------------------------------ && "
+                        comandos_cmd += cm+" && echo ------------------------------------------------------------------ && "
                 else:
-                        cmd_ajustado += cm
+                        comandos_cmd += cm
         retorno = subprocess.run(
-                ["cmd.exe", "/C", cmd_ajustado]
+                ["cmd.exe", "/C", comandos_cmd]
                 #, stderr = subprocess.PIPE
                 , capture_output=True
                 , text=True
@@ -26,11 +34,12 @@ def Comandos(cmd_ajustado = []):
 if __name__ == '__main__':
         os.system('cls')
         cmd_list = [
-                #"dir",
-                #"git status",
+                "dir",
+                "cd..",
+                "dir",
                 #"git remote show origin",
-                "git checkout teste2",
-                "git pull origin teste2",
+                #"git checkout teste2",
+                #"git pull origin teste2",
                 #"git config --list",
         ]
         retorno = Comandos(cmd_list)
