@@ -8,7 +8,7 @@ def Comandos(cmd_ajustado = []):
         for cm in cmd_list:
                 cont_cm += 1
                 if cont_cm < len(cmd_list):
-                        cmd_ajustado += cm+" && "
+                        cmd_ajustado += cm+" && echo ------------------------------------------------------------------ && "
                 else:
                         cmd_ajustado += cm
         retorno = subprocess.run(
@@ -28,10 +28,12 @@ if __name__ == '__main__':
         cmd_list = [
                 #"dir",
                 #"git status",
-                "git pull origin teste",
+                "git remote show origin",
+                "git checkout master",
+                "git pull master",
                 #"git config --list",
-                #"git remote show origin",
-                #"git checkout teste",
+                
+                
         ]
         retorno = Comandos(cmd_list)
         input()
