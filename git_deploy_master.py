@@ -2,10 +2,17 @@
 import os
 import subprocess
 
-def Comandos(comandos_list = []):
-        base_dir = os.path.dirname(__file__)
+def Comandos(cmd_ajustado = []):
+        cmd_ajustado = F"cd {os.path.dirname(__file__)} && "
+        cont_cm = 0
+        for cm in cmd_list:
+                cont_cm += 1
+                if cont_cm < len(cmd_list):
+                        cmd_ajustado += cm+" && "
+                else:
+                        cmd_ajustado += cm
         retorno = subprocess.run(
-                comandos_list
+                ["cmd.exe", "/C", cmd_ajustado]
                 #, stderr = subprocess.PIPE
                 , capture_output=True
                 , text=True
@@ -15,20 +22,12 @@ def Comandos(comandos_list = []):
         else:
                 print(retorno.stderr)
         return retorno.stdout
-        
-base_dir = os.path.dirname(__file__)
-os.system('cd..')
-retorno = Comandos(['cd', 'C:\\DESENVOLVIMENTO\\testes'])
-retorno = Comandos(['ls'])
-retorno = Comandos(['dir'])
 
-retorno = subprocess.run([
-        "git", "pull", "origin", "master"
-        ]
-        #, stderr = subprocess.PIPE
-        , capture_output=True
-        , text=True
-        , shell=True)
-print(retorno.stdout)
-
-base_dir = os.path.dirname(__file__)+'\\.git'
+cmd_list = [
+        "dir",
+        #"git status",
+        "git pull origin master"
+]
+retorno = Comandos(cmd_list)
+o=0
+input()
