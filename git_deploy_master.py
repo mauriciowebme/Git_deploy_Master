@@ -24,7 +24,7 @@ def Comandos(cmd_ajustado = []):
         return retorno.stdout
 
 cmd_list = [
-        "dir",
+        #"dir",
         #"git status",
         "git pull origin master"
 ]
