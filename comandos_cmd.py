@@ -4,11 +4,12 @@ import subprocess
 def Comandos(comandos_cmd = []):
         """
         Exemplos:
-        
+
         comandos_cmd = [
                 "dir",
                 "cd..",
                 "dir",
+                "git remote show origin",
         ]
         """
         comandos_cmd = F"cd {os.path.dirname(__file__)} && "
