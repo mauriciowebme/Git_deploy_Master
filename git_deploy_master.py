@@ -32,8 +32,6 @@ if __name__ == '__main__':
                 "git checkout teste2",
                 "git pull origin teste2",
                 #"git config --list",
-                
-                
         ]
         retorno = Comandos(cmd_list)
         input()
