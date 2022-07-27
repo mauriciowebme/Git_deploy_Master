@@ -24,10 +24,14 @@ def Comandos(cmd_ajustado = []):
         return retorno.stdout
 
 if __name__ == '__main__':
+        os.system('cls')
         cmd_list = [
                 #"dir",
                 #"git status",
-                "git pull origin master"
+                "git pull origin teste",
+                #"git config --list",
+                #"git remote show origin",
+                #"git checkout teste",
         ]
         retorno = Comandos(cmd_list)
         input()
