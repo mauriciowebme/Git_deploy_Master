@@ -1,10 +1,10 @@
-# pip install GitPython
 import os
 import subprocess
 
 def Comandos(comandos_cmd = []):
         """
         Exemplos:
+        
         comandos_cmd = [
                 "dir",
                 "cd..",
