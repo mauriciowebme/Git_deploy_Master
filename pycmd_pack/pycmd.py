@@ -36,9 +36,7 @@ def Comandos(cmd_list = []):
 if __name__ == '__main__':
         os.system('cls')
         cmd_list = [
-                "dir",
-                "cd..",
-                "dir",
+                "git pull origin master",
         ]
         retorno = Comandos(cmd_list)
         input()
