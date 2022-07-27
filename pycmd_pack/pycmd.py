@@ -28,17 +28,18 @@ def Comandos(cmd_list = []):
                 , text=True
                 , shell=True)
         if retorno.stdout != '':
-                print(retorno.stdout)
+                #print(retorno.stdout)
+                return retorno.stdout
         else:
-                print(retorno.stderr)
-        return retorno.stdout
+                #print(retorno.stderr)
+                return retorno.stderr
 
 if __name__ == '__main__':
         os.system('cls')
         cmd_list = [
-                "dir",
-                "cd..",
-                "dir",
+                "git checkout master",
+                "git pull origin master",
         ]
         retorno = Comandos(cmd_list)
+        print(retorno)
         input()
