@@ -1,15 +1,16 @@
 import os
 import subprocess
 
-def Comandos(comandos_cmd = []):
+def Comandos(cmd_list = []):
         """
         Exemplos:
-
-        comandos_cmd = [
+        cmd_list = [
                 "dir",
                 "cd..",
                 "dir",
                 "git remote show origin",
+                "git checkout master",
+                "git pull origin master",
         ]
         """
         comandos_cmd = F"cd {os.path.dirname(__file__)} && "
@@ -38,10 +39,6 @@ if __name__ == '__main__':
                 "dir",
                 "cd..",
                 "dir",
-                #"git remote show origin",
-                #"git checkout teste2",
-                #"git pull origin teste2",
-                #"git config --list",
         ]
         retorno = Comandos(cmd_list)
         input()

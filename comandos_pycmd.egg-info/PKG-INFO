@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: comandos-pycmd
+Version: 0.0.1
+Summary: API de comandos facilitados cmd
+Home-page: https://github.com/mauriciowebme/comandos_pycmd.git
+Author: Mauricio Azeredo
+Author-email: mauriciowebme@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+
+Bem vindo!
+
+Este Ã© um projeto simples de API para comandos facilitados de CMD com Python.
+
+Use o comando abaixo para instalaÃ§Ã£o do pacote completo.
+
+python setup.py install
+
