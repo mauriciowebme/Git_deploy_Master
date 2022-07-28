@@ -1,5 +1,4 @@
 **/dist/
 **/comandos_pycmd.egg-info/
 **/bild/
-build/lib/pycmd_pack/__init__.py
 **/__pycache__/
