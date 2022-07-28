@@ -18,7 +18,7 @@ def Comandos(cmd_list = []):
         for cm in cmd_list:
                 cont_cm += 1
                 if cont_cm < len(cmd_list):
-                        comandos_cmd += cm+" && echo ------------------------------------------------------------------ && "
+                        comandos_cmd += cm+" && "
                 else:
                         comandos_cmd += cm
         retorno = subprocess.run(
@@ -28,18 +28,15 @@ def Comandos(cmd_list = []):
                 , text=True
                 , shell=True)
         if retorno.stdout != '':
-                #print(retorno.stdout)
-                return retorno.stdout
+                retorno = ('-'*60 + '\n') + retorno.stdout + ('-'*60)
+                return retorno
         else:
-                #print(retorno.stderr)
-                return retorno.stderr
+                retorno = ('-'*60 + '\n') + retorno.stderr + ('-'*60)
+                return retorno
 
 if __name__ == '__main__':
         os.system('cls')
-        cmd_list = [
-                "git checkout master",
-                "git pull origin master",
-        ]
+        cmd_list = [""]
         retorno = Comandos(cmd_list)
         print(retorno)
         input()
