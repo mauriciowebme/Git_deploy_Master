@@ -34,9 +34,3 @@ def Comandos(cmd_list = []):
                 retorno = ('-'*60 + '\n') + retorno.stderr + ('-'*60)
                 return retorno
 
-if __name__ == '__main__':
-        os.system('cls')
-        cmd_list = [""]
-        retorno = Comandos(cmd_list)
-        print(retorno)
-        input()
