@@ -11,7 +11,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/x-rst",
     url='https://github.com/mauriciowebme/comandos_pycmd.git',
-    author='Mauricio Azeredo Rodrigues',
+    author='Mauricio Azeredo',
     license='MIT',
     author_email='mauriciowebme@gmail.com',
     install_requires=[
