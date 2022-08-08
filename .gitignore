@@ -2,4 +2,4 @@
 **/comandos_pycmd.egg-info/
 **/build/
 **/__pycache__/
-**/testes/
+/testes
